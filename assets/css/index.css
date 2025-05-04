@@ -13,6 +13,8 @@ body{
   margin-right: auto;
 }
 
+#weather
+
 .weather{
   background-color: #3D3D3D;
   border-radius: 16px;
@@ -77,6 +79,8 @@ body{
   margin-top: 15px;
 }
 
+#date
+
 .date{
   background-color: #3D3D3D;
   border-radius: 16px;
@@ -106,6 +110,8 @@ body{
   left: -5%;
   top: 50%;
 }
+
+#email
 
 .email{
   background-color: #3D3D3D;
@@ -157,4 +163,76 @@ body{
   line-height: 16px;
   color: #FFFFFF66;
   margin: 0;
+}
+#feeling
+
+.feeling{
+  background-color: #3D3D3D;
+  border-radius: 16px;
+  box-shadow: 0 0 5px #0000001F;
+  margin-top: 16px;
+  padding: 5px 16px;
+}
+
+.img-emoji{
+  width: 32px;
+  height: 32px;
+  margin: 0;
+}
+.emoji-title{
+  font-family: 'inter';
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22px;
+  color: #FFFFFF;
+  margin:0 0 15px 0;
+}
+
+.feeling ul{
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 0;
+  margin: 10px 0;
+}
+
+.feeling li{
+  width: calc(33.333% - (16px * 2 /3));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  /* min-height: 100%; */
+  background-color: #292929;
+  border-radius: 8px;
+  padding: 10px 16px;
+  flex-direction: column;
+}
+
+.quote{
+  background-color: #3D3D3D;
+  border-radius: 16px;
+  box-shadow: 0 0 5px #0000001F;
+  margin-top: 16px;
+  padding: 5px 16px;
+}
+
+.quote-content{
+  font-family: 'inter';
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 32px;
+  color: #FFFFFFCC;
+  margin-bottom: -10px;
+}
+
+.quote-subtitle{
+  font-family: 'inter';
+  display: flex;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  color: #FFFFFF66;
+  justify-content: flex-end;
 }
