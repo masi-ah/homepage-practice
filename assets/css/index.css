@@ -1,10 +1,19 @@
+:root{
+  --fontfamily:'inter';
+  --fontweight: 500;
+  --font-size: 28px;
+  --bg: #292929;
+  --bg-li: #3D3D3D;
+  --width: 100%;
+}
+
 *{
   box-sizing: border-box;
 }
 
 body{
-  background-color: #292929;
-  width: 100%;
+  background-color: var(--bg);
+  width: var(--width);
   overflow-x: hidden;
   margin: 0;
 }
@@ -15,10 +24,8 @@ body{
   margin-right: auto;
 }
 
-#weather
-
-.weather{
-  background-color: #3D3D3D;
+#weather .weather{
+  background-color: var(--bg-li);
   border-radius: 16px;
   box-shadow: 0 0 5px #0000001F;
   position: relative;
@@ -31,26 +38,26 @@ body{
 }
 
 .title-hello{
-  font-family: 'inter';
-  font-weight: 500px;
-  font-size: 28px;
+  font-family: var(--fontfamily);
+  font-weight:var(--fontweight);
+  font-size: var(--font-size);
   line-height: 36px;
   color: #FFFFFF;
   margin-top: 10px;
 }
 
 .temperature{
-  font-family: 'inter';
-  font-size: 28px;
-  font-weight: 500;
+  font-family: var(--fontfamily);
+  font-size: var(--font-size);
+  font-weight: var(--fontweight);
   line-height: 36px;
   color: #FFFFFF;
 }
 
 .content{
-  font-family: 'inter';
+  font-family:var(--fontfamily);
   font-size: 12px;
-  font-weight: 500;
+  font-weight: var(--fontweight);
   line-height: 16px;
   color: #FFFFFF66;
   margin-top: -25px;
@@ -63,8 +70,8 @@ body{
 }
 
 .title-name{
-  font-family: 'inter';
-  font-weight: 500;
+  font-family: var(--fontfamily);
+  font-weight: var(--fontweight);
   font-size: 24px;
   line-height: 32px;
   color: #FFFFFF;
@@ -72,7 +79,7 @@ body{
 }
 
 .Title-info{
-  font-family: 'inter';
+  font-family: var(--fontfamily);
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
@@ -81,10 +88,9 @@ body{
   margin-top: 15px;
 }
 
-#date
 
-.date{
-  background-color: #3D3D3D;
+#date .date{
+  background-color: var(--bg-li);
   border-radius: 16px;
   box-shadow: 0 0 5px #0000001F;
   margin-top: 16px;
@@ -113,10 +119,8 @@ body{
   top: 50%;
 }
 
-#email
-
-.email{
-  background-color: #3D3D3D;
+#email .email{
+  background-color: var(--bg-li);
   border-radius: 16px;
   box-shadow: 0 0 5px #0000001F;
   margin-top: 16px;
@@ -147,7 +151,7 @@ body{
 
 .title{
   max-width: 316px;
-  font-family: 'inter';
+  font-family: var(--fontfamily);
   font-size: 16px;
   font-weight: 400;
   line-height: 22px;
@@ -159,17 +163,16 @@ body{
 }
 
 .subtitle{
-  font-family: 'inter';
+  font-family: var(--fontfamily);
   font-size: 12px;
-  font-weight:500;
+  font-weight: var(--fontweight);
   line-height: 16px;
   color: #FFFFFF66;
   margin: 0;
 }
-#feeling
 
-.feeling{
-  background-color: #3D3D3D;
+#feeling .feeling{
+  background-color: var(--bg-li);
   border-radius: 16px;
   box-shadow: 0 0 5px #0000001F;
   margin-top: 16px;
@@ -183,7 +186,7 @@ body{
 }
 
 .emoji-title{
-  font-family: 'inter';
+  font-family: var(--fontfamily);
   font-size: 16px;
   font-weight: 600;
   line-height: 22px;
@@ -213,8 +216,8 @@ body{
   flex-direction: column;
 }
 
-.quote{
-  background-color: #3D3D3D;
+#quote .quote{
+  background-color: var(--bg-li);
   border-radius: 16px;
   box-shadow: 0 0 5px #0000001F;
   margin-top: 16px;
@@ -222,20 +225,135 @@ body{
 }
 
 .quote-content{
-  font-family: 'inter';
+  font-family: var(--fontfamily);
   font-size: 20px;
-  font-weight: 500;
+  font-weight:var(--fontweight);
   line-height: 32px;
   color: #FFFFFFCC;
   margin-bottom: -10px;
 }
 
 .quote-subtitle{
-  font-family: 'inter';
+  font-family: var(--fontfamily);
   display: flex;
   font-size: 12px;
-  font-weight: 500;
+  font-weight: var(--fontweight);
   line-height: 16px;
   color: #FFFFFF66;
   justify-content: flex-end;
+}
+
+@media(max-width:1279px){
+  #news{
+    display: none;
+  }
+}
+
+@media(min-width:1280px){
+  body{
+    width: var(--width);
+    margin: 0;
+  }
+  .container{
+    width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 93px;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    gap: 20px;
+  }
+
+  #weather {
+    grid-column: 1 / 6;
+    grid-row: 1 / 4;
+  }
+  
+  #date {
+    grid-column: 1 / 6; 
+    grid-row: 4/ 10 ;
+  }
+  
+  #email {
+    grid-column: 1 / 6; 
+    grid-row: 10 / 14;
+  }
+  
+  #quote {
+    grid-column: 6/ 11; 
+    grid-row: 10/ 14;
+  }
+  
+  #feeling {
+    grid-column: 11/ 15;
+    grid-row: 10 / 14;
+  }
+  
+  #news {
+    position: relative;
+    grid-column: 6 / 15; 
+    grid-row: 1/ 10;
+  }
+
+  .container section {
+    background-color: var(--bg-li);
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 0 5px #0000001f;
+  } 
+
+  #news ul{ 
+    display: flex;
+    list-style: none;
+    gap: 10px;
+    /* background-color: #FFC453; */
+    padding-left: 0;
+    padding: 0;
+  }
+
+  #news li{
+    font-family:var(--fontfamily);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 22px;
+    color: #FFFFFF;
+    margin: 0;
+    padding: 15px;
+  }
+
+  #news li:hover{
+    background-color:#292929 ;
+    cursor: grab;
+  }
+
+  .news-img{
+    width:var(--width);
+    max-width: 816px;
+    object-fit: cover;
+    height: 320px;
+    align-items: center;
+    justify-content: start;
+  }
+
+  .news-text{
+    font-family:'Inter', sans-serif;
+    max-width: 800px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #FFFFFF;
+    position: absolute;
+    top: 300px;
+    word-break: break-word;
+    flex-wrap: wrap;
+    padding: 10px;
+    backdrop-filter: blur(24px);
+  }
+
+  #weather, #date, #quote, #email, #feeling, #news{
+    padding: 0 16px;
+    margin: 0;
+  }
+
 }
